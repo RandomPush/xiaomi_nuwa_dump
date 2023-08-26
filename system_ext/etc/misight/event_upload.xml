@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?Declaration Don't modify the file manually,  its created automaticlly?>
+<Upload>
+  <TemplateGroup>
+    <Template name="TPL_QSEE_TZ_LOG">
+      <Cmd FaultLevel="CRITICAL" PrivacyLevel="L3" run="cat /proc/tzdbg/qsee_log" extra="block:5" output="qsee_log"/>
+      <Cmd FaultLevel="CRITICAL" PrivacyLevel="L3" run="cat /proc/tzdbg/log" extra="block:5" output="tz_log"/>
+    </Template>
+  </TemplateGroup>
+  <Event min="902001001" max="902001001">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L2" run="dumpsys misight plugin PerfLogAnalyzer" output="perf_log_analyzer.log"/>
+  </Event>
+
+  <Event min="902001050" max="902001051">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L2" run="dumpsys misight plugin PerfLogAnalyzer" output="perf_log_analyzer.log"/>
+  </Event>
+  <Event min="902001100" max="902001104">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L2" run="dumpsys misight plugin PerfLogAnalyzer" output="perf_log_analyzer.log"/>
+  </Event>
+  <Event min="902001200" max="902001204">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L2" run="dumpsys misight plugin PerfLogAnalyzer" output="perf_log_analyzer.log"/>
+  </Event>
+  <Event min="906001001" max="906001001">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L3" run="dmesg" output="sound_card_kernel.log"/>
+  </Event>
+  <Event min="906001351" max="906001354">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L3" run="dmesg" output="PA_kernel.log"/>
+  </Event>
+  <Event min="906002001" max="906002005">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L3" run="logcat -t 200000" output="Sound_Trigger_logcat.log"/>
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L3" run="dmesg" output="Sound_Trigger_dmesg.log"/>
+  </Event>
+  <Event min="906100001" max="906100003">
+  <Cmd FaultLevel="IMPORTANT" PrivacyLevel="L3" run="logcat -t 200000" output="Video_generic_exceptions_logcat.log"/>
+  <Cmd FaultLevel="IMPORTANT" PrivacyLevel="L3" run="dmesg" output="Video_generic_exceptions_kernel.log"/>
+  </Event>
+
+  <Event min="906121001" max="906121001">
+  <Cmd FaultLevel="IMPORTANT" PrivacyLevel="L3" run="logcat -t 200000" output="create_trace_failed_logcat.log"/>
+  <Cmd FaultLevel="IMPORTANT" PrivacyLevel="L3" run="dmesg" output="create_trace_failed_kernel.log"/>
+  </Event>
+
+  <Event min="906130001" max="906130001">
+  <Cmd FaultLevel="IMPORTANT" PrivacyLevel="L3" run="logcat -t 200000" output="Video_delay_logcat.log"/>
+  <Cmd FaultLevel="IMPORTANT" PrivacyLevel="L3" run="dmesg" output="Video_delay_kernel.log"/>
+  </Event>
+
+  <Event min="906140001" max="906140001">
+  <Cmd FaultLevel="IMPORTANT" PrivacyLevel="L3" run="logcat -t 200000" output="Picture_quality_features_logcat.log"/>
+  <Cmd FaultLevel="IMPORTANT" PrivacyLevel="L3" run="dmesg" output="Picture_quality_features_kernel.log"/>
+  </Event>
+
+  <Event min="906201001" max="906201002">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L3" run="dmesg" output="qcom_haptic_kernel.log"/>
+  </Event>
+
+  <Event min="906202001" max="906202002">
+  <Cmd FaultLevel="GENERAL" PrivacyLevel="L3" run="dmesg" output="qcom_haptic_kernel.log"/>
+  </Event>
+
+  <Event min="904001001" max="904001004">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+  <Event min="904002001" max="904002002">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+  <Event min="904003001" max="904003001">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+  <Event min="904004001" max="904004003">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+  <Event min="904005001" max="904005005">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+  <Event min="904006001" max="904006004">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+  <Event min="904008001" max="904008004">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+  <Event min="904009001" max="904009002">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+  <Event min="904011001" max="904011005">
+    <Import template="TPL_QSEE_TZ_LOG"/>
+  </Event>
+
+</Upload>

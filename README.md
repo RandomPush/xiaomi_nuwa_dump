@@ -1,0 +1,14 @@
+# missi_phone_cn-user 14 UKQ1.230705.002 V14.0.0.4.UMBCNXM release-keys
+- manufacturer: xiaomi
+- platform: kalama
+- codename: nuwa
+- flavor: missi_phone_cn-user
+- release: 14
+- id: UKQ1.230705.002
+- incremental: V14.0.0.4.UMBCNXM
+- tags: release-keys
+- fingerprint: Xiaomi/nuwa/nuwa:13/TKQ1.221114.001/V14.0.0.4.UMBCNXM:user/release-keys
+- is_ab: true
+- brand: Xiaomi
+- branch: missi_phone_cn-user-14-UKQ1.230705.002-V14.0.0.4.UMBCNXM-release-keys
+- repo: xiaomi_nuwa_dump
